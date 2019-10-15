@@ -27,7 +27,7 @@ app build.gradle
 ```
 
 ## Usage
-针对不同的baseurl生成不同的retrofit对象
+step 1:针对不同的baseurl生成不同的retrofit对象
 
 ``` java
  private static GithubService sGithubService;
@@ -56,3 +56,34 @@ app build.gradle
         return sWanAndroidService;
     }
 ```
+
+step2:注册provider
+```java
+ XRetrofit.registerProvider(new BaseNetConfigProvider());
+        XRetrofit.registerProvider(BaseUrlConfig.baseUrl_GitHub, new GitHubNetConfigProvider());
+```
+
+step3:访问网络
+``` java
+  private void testGithub() {
+        GitHubModel gitHubModel = new GitHubModel();
+
+        gitHubModel.getEthBalance("chenxy")
+                .compose(this.<ResponseBody>bindToLifecycle())
+                .subscribe(new Consumer<ResponseBody>() {
+                    @Override
+                    public void accept(ResponseBody responseBody) throws Exception {
+                        try {
+                            String string = responseBody.string();
+                            Log.d("test", string);
+                            showResult(string);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+    }
+
+
+```
+详情可参考demo
