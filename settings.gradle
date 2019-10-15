@@ -1,0 +1,2 @@
+include ':app', ':xretrofit', ':xkotlinretrofit'
+rootProject.name='RetrofitBaseurlManager'

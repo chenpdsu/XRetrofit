@@ -1,0 +1,37 @@
+ext {
+    android = [
+            applicationId     : "com.msy.retrofitbaseurlmanager",
+            compileSdkVersion : 26,
+            buildToolsVersion : "27.0.3",
+            minSdkVersion     : 16,
+            targetSdkVersion  : 26,
+            versionName       : '1.0.0',
+            supportSdkVersion : '27.1.1',
+            retrofitSdkVersion: "2.2.0",
+            okhttpVersion     : "3.4.2",
+            rxlifecycleVersion: "2.0.1",
+    ]
+    dependencies = [
+            "appcompat-v7"               : "com.android.support:appcompat-v7:${android["supportSdkVersion"]}",
+            "support-v4"                 : "com.android.support:support-v4:${android["supportSdkVersion"]}",
+            "recyclerview-v7"            : "com.android.support:recyclerview-v7:${android["supportSdkVersion"]}",
+            "rxandroid"                  : "io.reactivex.rxjava2:rxandroid:${android["rxlifecycleVersion"]}",
+            "rxjava"                     : "io.reactivex.rxjava2:rxjava:${android["rxlifecycleVersion"]}",
+            "retrofit"                   : "com.squareup.retrofit2:retrofit:${android["retrofitSdkVersion"]}",
+            "retrofit-converter-gson"    : "com.squareup.retrofit2:converter-gson:${android["retrofitSdkVersion"]}",
+            "retrofit-adapter-rxjava"    : "com.squareup.retrofit2:adapter-rxjava2:${android["retrofitSdkVersion"]}",
+            "okhttp3-logging-interceptor": "com.squareup.okhttp3:logging-interceptor:${android["okhttpVersion"]}",
+            "okhttp3"                    : "com.squareup.okhttp3:okhttp:${android["okhttpVersion"]}",
+            "rxlifecycle"                : "com.trello.rxlifecycle2:rxlifecycle:${android["rxlifecycleVersion"]}",
+            "rxlifecycle-android"        : "com.trello.rxlifecycle2:rxlifecycle-android:${android["rxlifecycleVersion"]}",
+            "rxlifecycle-components"     : "com.trello.rxlifecycle2:rxlifecycle-components:${android["rxlifecycleVersion"]}",
+            "multidex"                   : "com.android.support:multidex:1.0.3",
+            "blankjUtil"                 : "com.blankj:utilcode:1.6.4"
+    ]
+
+    increasedVersionCode = this.&increasedVersionCode
+}
+
+def increasedVersionCode() {
+    return new Date().format("YYMMddHHmm").toInteger();
+}
