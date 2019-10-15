@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply from: 'maven_build.gradle'
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -10,6 +10,14 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
     }
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/java']
+            resources.srcDirs = ['src/java']
+            res.srcDirs = ['res']
+        }
+    }
 
     buildTypes {
         release {
@@ -17,6 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 
 }
 
