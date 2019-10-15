@@ -8,9 +8,6 @@
  - 对一个网络请求的基本配置，一个baseUrl对应一个provider，多个baseUrl也可对应一个公共的provider.
 
 
-## Overview
-![111](https://m.qpic.cn/psb?/V11v5jg619beqh/IHZUDO7cHmRr*Gu0ydiYm7PB7c2uA2Q*zL*pXz6zI2Q!/b/dLYAAAAAAAAA&bo=OASABwAAAAARB4s!&rf=viewer_4 = 200x600)
-
 ## Download
 
 root build.gradle
