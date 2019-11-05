@@ -474,6 +474,9 @@ public static java.lang.String TABLENAME;
 -keep class com.msy.ethwallet.**{*;}
 -keepattributes *Annotation*
 
-
+-keep class com.msy.xretrofit.BaseNetConfigProvider
+-keep class com.msy.xretrofit.NetError
+-keep class com.msy.xretrofit.XRetrofit
+-keep class com.msy.xretrofit.interfaces.IModel
 
 
