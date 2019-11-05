@@ -183,30 +183,4 @@ public class XRetrofit {
         };
     }
 
-
-    /**
-     * 异常处理变换
-     *
-     * @return
-     */
-//    public static <T> FlowableTransformer<T, T> getApiTransformer() {
-//
-//        return new FlowableTransformer<T, T>() {
-//            @Override
-//            public Publisher<T> apply(Flowable<T> upstream) {
-//                return upstream.flatMap(new Function<T, Publisher<T>>() {
-//                    @Override
-//                    public Publisher<T> apply(T model) throws Exception {
-//                        if (model.isError()) {
-//                            return Flowable.error(new NetError(model.getErrorMsg(), NetError.ErrorType.ServerError));
-//                        } else {
-//                            return Flowable.just(model);
-//                        }
-//                    }
-//                });
-//            }
-//        };
-//    }
-
-
 }

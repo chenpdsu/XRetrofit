@@ -4,7 +4,7 @@ ext {
     GITHUB_REPO_PATH = "/Users/chenxiangyu/Frame/mayun/XRetrofit"
     PUBLISH_GROUP_ID = 'com.chenxy.xretrofit'
     PUBLISH_ARTIFACT_ID = 'xretrofit'
-    PUBLISH_VERSION = '1.0.1'
+    PUBLISH_VERSION = '1.0.5'
 }
 
 uploadArchives {
